@@ -1,0 +1,120 @@
+.hero {
+  background-color: #2f303a;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../img/hero/hero-mobile.jpg");
+
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: $tablet - 1),
+    screen and (min-resolution: 192dpi) and (max-width: $tablet - 1),
+    screen and (min-resolution: 2dppx) and (max-width: $tablet - 1) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/hero/hero-mobile@2x.jpg");
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/hero/hero-tablet.jpg");
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: $tablet),
+    screen and (min-resolution: 192dpi) and (min-width: $tablet),
+    screen and (min-resolution: 2dppx) and (min-width: $tablet) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/hero/hero-tablet@2x.jpg");
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/hero/hero-desktop.jpg");
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: $desktop),
+    screen and (min-resolution: 192dpi) and (min-width: $desktop),
+    screen and (min-resolution: 2dppx) and (min-width: $desktop) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/hero/hero-desktop@2x.jpg");
+  }
+
+  background-size: cover;
+  background-position: center;
+
+  & > .container {
+    text-align: center;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    min-height: 400px;
+
+    @media screen and (min-width: $tablet) {
+      min-height: 400px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 200px;
+      padding-bottom: 200px;
+      min-height: 600px;
+    }
+  }
+
+  &-title {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    max-width: 380px;
+
+    font-size: 26px;
+    line-height: 1.62;
+
+    @media screen and (min-width: $desktop) {
+      max-width: 700px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+
+  &-btn {
+    display: inline-block;
+    padding: 10px 32px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    text-decoration: none;
+
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+    transition: background-color 250ms var(--transition-timing-function);
+  }
+
+  &-btn:hover,
+  &-btn:focus {
+    background-color: #188ce8;
+  }
+}
